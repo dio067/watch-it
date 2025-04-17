@@ -1,0 +1,19 @@
+{
+  "name": "watch-it",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "watch": "script.js"
+  },
+  "dependencies": {
+    "chokidar": "^1.0.0-rc5",
+    "lodash.debounce": "^4.0.8"
+  }
+}
