@@ -1,5 +1,6 @@
 #! /usr/bin/env node
 const chokidar = require("chokidar");
+const chalk = require("chalk");
 const debounce = require("lodash.debounce");
 const prog = require("caporal");
 const fs = require("fs");
@@ -22,6 +23,7 @@ prog
 			if (proc) {
 				proc.kill();
 			}
+			console.log(chalk.bold(chalk.green(">>>Starting the process!")));
 			proc = spawn("node", [`${name}`], { stdio: "inherit" });
 		}, 100);
 
