@@ -3,6 +3,7 @@ const chokidar = require('chokidar');
 const debounce = require('lodash.debounce');
 const prog = require('caporal');
 const fs = require('fs');
+const { spawn } = require('child_process');
 
 prog
 .version('1.0.1')
@@ -18,8 +19,8 @@ prog
     }
 
     const start = debounce(() => {
-        console.log("STARTING THE PROGRAM!!");
-    }, 100);
+        spawn('node', [`${name}`], {stdio: 'inherit'});
+    }, 100);        
     
     chokidar.watch('.')
     .on('add', start)
